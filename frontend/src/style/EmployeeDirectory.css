@@ -1,0 +1,61 @@
+/* This below is the styling for EmployeeDirectory component */
+.directory-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+  background-color: #333333; 
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.content-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 8px 8px;
+}
+
+.employee-section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.employee-section > * {
+  flex: 1 1 100%;
+  min-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .employee-section {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .employee-section > * {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+@media (min-width: 1024px) {
+  .employee-section > * {
+    flex: 1 1 calc(50% - 20px);
+  }
+}

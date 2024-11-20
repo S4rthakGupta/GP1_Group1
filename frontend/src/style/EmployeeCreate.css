@@ -1,0 +1,99 @@
+/* This below is the styling for EmployeeCreate component */
+.employee-create-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-create-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-create-title i {
+  margin-right: 8px;
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.employee-form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.employee-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #666666;
+}
+
+.employee-input, .employee-select {
+  padding: 10px;
+  font-size: 1rem;
+  color: #333333;
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.employee-input::placeholder {
+  color: #bbbbbb;
+}
+
+.employee-input:focus, .employee-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.employee-error {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #ff4d4d;
+}
+
+.employee-submit-button {
+  background-color: #474747;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 12px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.employee-submit-button:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .employee-form-row {
+    flex-direction: column;
+  }
+}

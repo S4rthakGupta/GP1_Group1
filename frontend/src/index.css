@@ -1,0 +1,5 @@
+/* Giving a Font-Family to the whole body! */
+body
+{
+    font-family: system-ui;
+}
