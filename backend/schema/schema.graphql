@@ -1,0 +1,51 @@
+# Mutation for adding a new employee
+type Mutation {
+  createEmployee(input: EmployeeInput!): Employee
+  
+  #new
+  updateEmployee(id: ID!, input: UpdateEmployeeInput!): Employee
+  deleteEmployee(id: ID!): Message
+}
+
+#new
+type Message {
+  message: String
+}
+
+#new
+input UpdateEmployeeInput {
+  Title: String
+  Department: String
+  CurrentStatus: Boolean
+}
+
+# Input type for creating an employee, specifying required fields
+input EmployeeInput {
+  FirstName: String!
+  LastName: String!
+  Age: Int!
+  DateOfJoining: String!
+  Title: String!
+  Department: String!
+  EmployeeType: String!
+}
+
+# Defines the Employee data structure returned from queries and mutations
+type Employee {
+  id: ID!
+  FirstName: String!
+  LastName: String!
+  Age: Int!
+  DateOfJoining: String!
+  Title: String!
+  Department: String!
+  EmployeeType: String!
+  CurrentStatus: Boolean!
+}
+ 
+# Query to retrieve all employees
+type Query {
+#new
+  getEmployees(type: String): [Employee]
+  employee(id: ID!): Employee
+}
